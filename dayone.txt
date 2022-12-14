@@ -1,0 +1,81 @@
+
+-- DAY ONE --
+
+*Walking through a hall*
+(Hm? I hear someone running behind me)
+
+\\\stand still\\\
+
+???: Hi! You're new here, aren't you?
+(Its... a girl with pink hair)
+???: I haven't seen you around. Are you new here?
+
+\\\keepwalking\\\
+
+(I'll just ignore it)
+???: H E Y! W A I T!
+(oh help)
+*you turn around*
+???: Hi! You're new here, aren't you?
+(Its... a girl with pink hair)
+???: I haven't seen you around. Are you new here?
+
+\\\new here\\\
+
+???: Thats nice!
+???: Anyways, welcome to Saul Goodman High School.
+Tohru: My name's Tohru, nice to meet you!
+
+\\\been here for a while\\\
+
+???: Well thats a lie.
+???: I know everyone at this school, 
+???: and this is the first time i've seen you here.
+???: So anyways, welcome to Saul Goodman High School.
+Tohru: My name's Tohru, nice to meet you!
+
+-On the way to your first lesson-
+
+Tohru: So, Senpai, do you think you'll make some good
+Tohru: friends in this class?
+Tohru: I sure hope so, the whole class was excited to
+Tohru: meet you. I'll be your friend though! Promise!
+(Maybe. I dont know her well enough yet though.)
+
+-After first lesson-
+
+(That was a long lesson. Time for a break)
+???: Hey
+(Its a... guy dressed in really flashy goth clothes.)
+(It's so extreme it almost looks fake.)
+
+\\\yo or hey\\\
+
+???: You're new here. Like it so far?
+1 : Yeah its really cool! / 2: The people are weird
+???: Actually, it doesnt matter.
+(Huh, he interrupted me before I could even answer.)
+???: You'll get used to it here with time.
+Thorne: I'm Thorne. Nice to meet you.
+
+\\\silence\\\
+
+???: ...Well thats just rude.
+*He spins on his heel, and walks away*
+(What a weirdo)
+Tohru: Thats Thorne. You'll have to really try if you
+Tohru: want to make friends with him.
+
+-After school-
+
+*Looking around the clubrooms*
+(A few of these look cool)
+(The archery club looks exciting)
+(Hm? Isnt that...)
+Tohru: Hi, Senpai!
+Thorne: Hey there.
+(What are they doing here?)
+Tohru: Are you looking at the clubs?
+
+\\\if tohru is five\\\
+Tohru: You should join the theatre club.

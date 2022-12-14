@@ -1,0 +1,216 @@
+import time
+
+speeddial = 0
+longdial = 1
+temp = 99
+dial = 99
+relationshiptemp = 99
+step = 0
+tohru = 5
+thorne = 5
+datalen = 1
+savedat = []
+
+
+class data:
+	def save():
+		global savedat
+
+		if datalen >= 1:
+			savedat.append(checkpoint)
+		if datalen >= 2:
+			savedat.append(0)
+			savedat.append(tohru)
+		if datalen >= 3:
+			savedat.append(thorne)
+
+		for i in savedat:
+			print(i, end="")
+			print("")
+
+
+		savedat = []
+
+class error:
+	def inputerror():
+		print("")
+		print("Hey! Thats not a valid input! Try again.")
+		print("")
+
+class txtp:
+	def lines(numone, numtwo):
+		dial = text.readlines()[numone:numtwo]
+		lengthdial = len(dial)
+		step = 0
+		for i in range(lengthdial):
+			print(dial[step])
+			step = step + 1
+			time.sleep(speeddial)
+		step = 0
+
+
+
+	def question(optionval, question, ifValOneDial1, ifValOneDial2, ifValTwoDial1, ifValTwoDial2, ifValThreeDial1, ifValThreeDial2, partnerrelationshiptruefalseval1, partnerrelationshiptruefalseval2, partnerrelationshiptruefalseval3, partnerRelationshipplus, partnerRelationshipminus, isSavable):
+		global relationshiptemp
+		temp = 99
+		if isSavable == 1:
+			print("(This input is savable, type 'save' to get save value)")
+		if optionval == 2:
+			while temp != 1 and temp != 2:
+				temp = input(question)
+				print("")
+				if temp == "1" or temp == "2":
+					temp = int(temp)
+				elif temp == "save" and isSavable == 1:
+					data.save()
+				else:
+					error.inputerror()
+
+		if optionval == 3:
+			while temp != 1 and temp != 2 and temp != 3:
+				temp = input(question)
+				print("")
+				if temp == "1" or temp == "2" or temp == "3":
+					temp = int(temp)
+				elif temp == "save" and isSavable == 1:
+					data.save()
+				else:
+					error.inputerror()
+		
+		if temp == 1:
+			dial = text.readlines()[ifValOneDial1:ifValOneDial2]
+			lengthdial = len(dial)
+			step = 0
+			for i in range(lengthdial):
+				print(dial[step])
+				step = step + 1
+				time.sleep(speeddial)
+			step = 0
+			if partnerrelationshiptruefalseval1 == 1:
+				relationshiptemp = partnerRelationshipplus
+			if partnerrelationshiptruefalseval1 == 2:
+				relationshiptemp = partnerRelationshipminus
+
+		if temp == 2:
+			dial = text.readlines()[ifValTwoDial1:ifValTwoDial2]
+			lengthdial = len(dial)
+			step = 0
+			for i in range(lengthdial):
+				print(dial[step])
+				step = step + 1
+				time.sleep(speeddial)
+			step = 0
+			if partnerrelationshiptruefalseval2 == 1:
+				relationshiptemp = partnerRelationshipplus
+			if partnerrelationshiptruefalseval2 == 2:
+				relationshiptemp = partnerRelationshipminus
+
+		if temp == 3:
+			dial = text.readlines()[ifValThreeDial1:ifValThreeDial2]
+			lengthdial = len(dial)
+			step = 0
+			for i in range(lengthdial):
+				print(dial[step])
+				step = step + 1
+				time.sleep(speeddial)
+			step = 0
+			if partnerrelationshiptruefalseval3 == 1:
+				relationshiptemp = partnerRelationshipplus
+			if partnerrelationshiptruefalseval3 == 2:
+				relationshiptemp = partnerRelationshipminus
+		
+class relate:
+	def tohruplus():
+		global tohru
+		tohru = tohru + relationshiptemp
+	def tohruminus():
+		global tohru
+		tohru = tohru - relationshiptemp
+	def thorneplus():
+		global thorne
+		thorne = thorne + relationshiptemp
+	def thorneminus():
+		global thorne
+		thorne = thorne - relationshiptemp
+
+
+
+
+
+print("Hey welcome! Enter a code for a checkpoint save, or type 0 to start a new game!")
+print("-------------------------------------------------------------------------------")
+checkpointinputted = int(input("--------------------------------CHECKPOINT CODE---------------------------------\n"))
+
+#FIRST ONE - TWO DIGITS ARE STORY LOCATION, STORY DAY
+#ZERO SPLITS DATA BETWEEN DAY AND RELATIONSHIP
+#FIRST DIGIT AFTER ZERO IS RELATIONSHIP WITH TOHRU, SECOND IS THORNE
+
+if int(str(checkpointinputted)[0]) != 0:
+	if int(str(checkpointinputted)[1]) == 0:
+		checkpoint = int(str(checkpointinputted)[0])
+	elif int(str(checkpointinputted)[1]) > 0:
+		checkpoint = (int(str(checkpointinputted)[0]) * 10) + int(str(checkpointinputted)[1])
+
+	if int(str(checkpointinputted)[3]) != 0:
+		tohru = int(str(checkpointinputted)[3])
+	elif int(str(checkpointinputted)[3]) == 0:
+		tohru = int(str(checkpointinputted)[4])
+
+	if int(str(checkpointinputted)[3]) != 0:
+		thorne = int(str(checkpointinputted)[4])
+	elif int(str(checkpointinputted)[3]) == 0:
+		thorne = int(str(checkpointinputted)[5])
+else:
+	checkpoint = 0
+
+
+if checkpoint == 0:
+	with open('starttext.txt') as text:
+		txtp.lines(0,8)
+		gender = 0
+		while gender != 1 and gender != 2 and gender != 3:
+			gender = input("1: Male / 2: Female / 3: Omen of Death\n")
+			if gender == "1" or gender == "2" or gender == "3":
+				gender = int(gender)
+				checkpoint = 1
+			else:
+				error.inputerror()
+			
+if checkpoint == 1:
+	with open('dayone.txt') as text:
+		txtp.lines(0,6)
+		temp = 69
+		text.close()
+	with open('dayone.txt') as text:
+		txtp.question(2, "1: Turn around / 2: Keep walking\n", 7, 11, 13, 21, 0, 0, 0, 0, 0, 0, 0, 1)
+		text.close()
+	with open('dayone.txt') as text:
+		txtp.question(2, "1: No, I've been here for a while / 2: Yeah, I just came here\n", 29, 35, 23, 27, 0, 0, 2, 0, 0, 0, 1, 0)
+		if temp == 1:
+			relate.tohruminus()
+		text.close()
+	datalen = 2
+	checkpoint = 2
+	time.sleep(longdial)
+
+if checkpoint == 2:
+	with open('dayone.txt') as text:
+		txtp.lines(36,42)
+		time.sleep(longdial)
+		text.close()
+	with open('dayone.txt') as text:
+		txtp.lines(44, 49)
+		text.close()
+	with open('dayone.txt') as text:
+		txtp.question(3, "1: Yo / 2: Hey / 3: (stay silent)\n", 52, 59, 52, 59, 61, 67, 0, 1, 2, 1, 3, 0)
+		if temp == 3:
+			relate.thorneminus()
+		datalen = 3
+		checkpoint = 3
+		time.sleep(longdial)
+
+if checkpoint == 3:
+	with open('dayone.txt') as text:
+		txtp.lines(68,78)
+		text.close()
+	

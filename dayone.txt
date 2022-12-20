@@ -79,3 +79,111 @@ Tohru: Are you looking at the clubs?
 
 \\\if tohru is five\\\
 Tohru: You should join the theatre club.
+Tohru: I signed up for it just the other day,
+Tohru: I'm sure it'll be fun.
+
+\\\if thorne is five\\\
+Thorne: The Modern Arts club is really fun.
+Thorne: Im vice president, I'd love if you were to join
+Thorne: Or don't. It's up to you.
+
+(Hmm... Which one should I take?)
+[This action will have a large effect on the game]
+
+
+\\\Theatre\\\
+
+Tohru: Yay! I'm excited to see you there.
+Tohru: I'm sure we'll have loads of fun together!
+Tohru: Let's hope we make friends there
+
+
+\\\Arts\\\
+
+Thorne: Thanks. We really need more members.
+Thorne: It might be fun if we want it to be
+
+\\\if rel down\\\
+
+(I'll do what seems right)
+(I wonder if I'll know anyone in the clubs)
+
+
+
+\\\At home\\\
+
+-At Home-
+
+(Today was pretty fun.)
+(I hope tomorrow will be just as cool)
+
+(I wonder if I should call anyone)
+
+
+\\\Call Tohru\\\
+
+[Tohru: HEY! Today was incredibly fun!]
+[Tohru: Thanks for calling me. ]
+[Tohru: Is there anything specific you want to talk about?]
+
+\Clubs-Theatre\
+
+[Tohru: I'm so glad we're in the same club!]
+[Tohru: It'll be so cool together!]
+[Tohru: Even if you're a beginner at acting,]
+[Tohru: With enough practice, you'll be incredible!]
+
+\Clubs-Other\
+
+[Tohru: I'm glad you found something cool.]
+[Tohru: Anything you pick will be fun, I'm sure.]
+
+\Clubs-None\
+
+[Tohru: Why didn't you pick a club?]
+[Tohru: It's healthy to be social.]
+[Tohru: If you change your mind, maybe just maybe,]
+[Tohru: We could sign you up for a club late.]
+[Tohru: Today was the last day you could sign up,]
+[Tohru: So it might be an issue.]
+[Tohru: But dont worry!]
+
+\Today-lesson\
+
+[Tohru: Did you miss something in today's lesson?]
+[Tohru: Great timing!]
+[Tohru: I took lots of notes today.]
+[Tohru: One second...]
+
+(longrest)
+
+*Your phone vibrates, Tohru sent you a document*
+
+[Tohru: There we go! You should have gotten all of them.]
+
+\\Finish\\
+
+[Tohru: Thanks for calling me! This was really fun.]
+[Tohru: Get some rest, you'll need it.]
+[Tohru: Don't forget homework!]
+
+*She hangs up the phone*
+
+\\\Call Thorne\\\
+
+[Thorne: Hey. Whats up?]
+[Thorne: Don't worry, you're not bothering me.]
+
+\Club-Arts\
+
+[Thorne: Hey, thanks a lot for joining our club.]
+[Thorne: We really needed the members.]
+
+\Club-Else\
+
+[Thorne: Oh yeah. You chose a different club, didn't you?]
+[Thorne: Have fun I guess.]
+
+\Clubs-None\
+
+[Thorne: If you didn't pick a club, you might be able to join ours later on.]

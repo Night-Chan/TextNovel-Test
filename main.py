@@ -2,9 +2,9 @@ import time
 
 speeddial = 0
 longdial = 1
-temp = 99
-dial = 99
-relationshiptemp = 99
+temp = 69
+dial = 69
+relationshiptemp = 69
 step = 0
 tohru = 5
 thorne = 5
@@ -23,6 +23,8 @@ class data:
 			savedat.append(tohru)
 		if datalen >= 3:
 			savedat.append(thorne)
+		if datalen >= 4:
+			savedat.append(club)
 
 		for i in savedat:
 			print(i, end="")
@@ -145,6 +147,8 @@ checkpointinputted = int(input("--------------------------------CHECKPOINT CODE-
 #ZERO SPLITS DATA BETWEEN DAY AND RELATIONSHIP
 #FIRST DIGIT AFTER ZERO IS RELATIONSHIP WITH TOHRU, SECOND IS THORNE
 
+#ADD A CHECK TO COUNT DIGITS
+
 if int(str(checkpointinputted)[0]) != 0:
 	if int(str(checkpointinputted)[1]) == 0:
 		checkpoint = int(str(checkpointinputted)[0])
@@ -160,6 +164,12 @@ if int(str(checkpointinputted)[0]) != 0:
 		thorne = int(str(checkpointinputted)[4])
 	elif int(str(checkpointinputted)[3]) == 0:
 		thorne = int(str(checkpointinputted)[5])
+
+	if int(str(checkpointinputted)[3]) != 0:
+		club = int(str(checkpointinputted)[6])
+	elif int(str(checkpointinputted)[3]) == 0:
+		club = int(str(checkpointinputted)[7])
+		
 else:
 	checkpoint = 0
 
@@ -208,9 +218,44 @@ if checkpoint == 2:
 		datalen = 3
 		checkpoint = 3
 		time.sleep(longdial)
-
+		
 if checkpoint == 3:
 	with open('dayone.txt') as text:
 		txtp.lines(68,78)
 		text.close()
+	if tohru == 5:
+		with open('dayone.txt') as text:
+			txtp.lines(80,83)
+	if thorne == 5:
+		with open('dayone.txt') as text:
+			txtp.lines(85,88)
+			txtp.close()
+	with open('dayone.txt') as text:
+			txtp.lines(89,91)
+			txtp.close()
+	with open('dayone.txt') as text:
+		txtp.question(3, "1: Theatre Club / 2: Modern Arts Club / 3: No Club\n", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1)
+		if temp == 1:
+			club = "theatre"
+		if temp == 2:
+			club = "arts"
+		if temp == 3:
+			club = 0
+	if club == "theatre":
+		if tohru == 5:
+			with open('dayone.txt') as text:
+				txtp.lines(95,98)
+	if club == "arts":
+		if thorne == 5:
+			with open('dayone.txt') as text:
+				txtp.lines(102,104)
+	if club == 0 or tohru < 5 or thorne < 5:
+		txtp.lines(107,109)
+	txtp.close()
 	
+	datalen = 4
+	checkpoint = 4
+	time.sleep(longdial)
+
+if checkpoint == 4:
+	with open('dayone.txt')

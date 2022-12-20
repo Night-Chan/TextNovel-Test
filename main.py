@@ -28,7 +28,7 @@ class data:
 
 		for i in savedat:
 			print(i, end="")
-			print("")
+		print("")
 
 
 		savedat = []
@@ -78,7 +78,7 @@ class txtp:
 					data.save()
 				else:
 					error.inputerror()
-		
+
 		if temp == 1:
 			dial = text.readlines()[ifValOneDial1:ifValOneDial2]
 			lengthdial = len(dial)
@@ -120,7 +120,7 @@ class txtp:
 				relationshiptemp = partnerRelationshipplus
 			if partnerrelationshiptruefalseval3 == 2:
 				relationshiptemp = partnerRelationshipminus
-		
+
 class relate:
 	def tohruplus():
 		global tohru
@@ -150,25 +150,27 @@ checkpointinputted = int(input("--------------------------------CHECKPOINT CODE-
 #ADD A CHECK TO COUNT DIGITS
 
 if int(str(checkpointinputted)[0]) != 0:
-	if int(str(checkpointinputted)[1]) == 0:
-		checkpoint = int(str(checkpointinputted)[0])
-	elif int(str(checkpointinputted)[1]) > 0:
-		checkpoint = (int(str(checkpointinputted)[0]) * 10) + int(str(checkpointinputted)[1])
+	if len(str(checkpointinputted)) == 2:
+		if int(str(checkpointinputted)[1]) == 0:
+			checkpoint = int(str(checkpointinputted)[0])
+		elif int(str(checkpointinputted)[1]) > 0:
+			checkpoint = (int(str(checkpointinputted)[0]) * 10) + int(str(checkpointinputted)[1])
 
-	if int(str(checkpointinputted)[3]) != 0:
-		tohru = int(str(checkpointinputted)[3])
-	elif int(str(checkpointinputted)[3]) == 0:
-		tohru = int(str(checkpointinputted)[4])
-
-	if int(str(checkpointinputted)[3]) != 0:
-		thorne = int(str(checkpointinputted)[4])
-	elif int(str(checkpointinputted)[3]) == 0:
-		thorne = int(str(checkpointinputted)[5])
-
-	if int(str(checkpointinputted)[3]) != 0:
-		club = int(str(checkpointinputted)[6])
-	elif int(str(checkpointinputted)[3]) == 0:
-		club = int(str(checkpointinputted)[7])
+	if len(str(checkpointinputted)) > 4:
+		if int(str(checkpointinputted)[3]) != 0:
+			tohru = int(str(checkpointinputted)[3])
+		elif int(str(checkpointinputted)[3]) == 0 and len(str(checkpointinputted)) > 5:
+			tohru = int(str(checkpointinputted)[4])
+	if len(str(checkpointinputted)) > 5:
+		if int(str(checkpointinputted)[3]) != 0:
+			thorne = int(str(checkpointinputted)[4])
+		elif int(str(checkpointinputted)[3]) == 0 and len(str(checkpointinputted)) > 6:
+			thorne = int(str(checkpointinputted)[5])
+	if len(str(checkpointinputted)) > 7:
+		if int(str(checkpointinputted)[3]) != 0:
+			club = int(str(checkpointinputted)[6])
+		elif int(str(checkpointinputted)[3]) == 0 and len(str(checkpointinputted)) > 8:
+			club = int(str(checkpointinputted)[7])
 		
 else:
 	checkpoint = 0
@@ -229,10 +231,10 @@ if checkpoint == 3:
 	if thorne == 5:
 		with open('dayone.txt') as text:
 			txtp.lines(85,88)
-			txtp.close()
+			text.close()
 	with open('dayone.txt') as text:
 			txtp.lines(89,91)
-			txtp.close()
+			text.close()
 	with open('dayone.txt') as text:
 		txtp.question(3, "1: Theatre Club / 2: Modern Arts Club / 3: No Club\n", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1)
 		if temp == 1:
@@ -241,6 +243,7 @@ if checkpoint == 3:
 			club = "arts"
 		if temp == 3:
 			club = 0
+		text.close()
 	if club == "theatre":
 		if tohru == 5:
 			with open('dayone.txt') as text:
@@ -251,11 +254,9 @@ if checkpoint == 3:
 				txtp.lines(102,104)
 	if club == 0 or tohru < 5 or thorne < 5:
 		txtp.lines(107,109)
-	txtp.close()
+	text.close()
 	
 	datalen = 4
 	checkpoint = 4
 	time.sleep(longdial)
 
-if checkpoint == 4:
-	with open('dayone.txt')

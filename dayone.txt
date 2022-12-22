@@ -160,7 +160,7 @@ Thorne: It might be fun if we want it to be
 
 [Tohru: There we go! You should have gotten all of them.]
 
-\\Finish\\
+\\Finish-Tohru\\
 
 [Tohru: Thanks for calling me! This was really fun.]
 [Tohru: Get some rest, you'll need it.]
@@ -185,4 +185,36 @@ Thorne: It might be fun if we want it to be
 
 \Clubs-None\
 
-[Thorne: If you didn't pick a club, you might be able to join ours later on.]
+[Thorne: If you didn't pick a club,]
+[Thorne: You might be able to join ours later on.]
+
+[Thorne: If you're lucky.]
+
+\Today-lesson\
+
+[Thorne: Im sorry.]
+[Thorne: I wasnt paying attention during today's class.]
+[Thorne: I can't help you much with that.]
+
+\\Finish-thorne\\
+
+\Ifrelup\
+
+[Thorne: I'll see you tomorrow.]
+[Thorne: G'night, see ya.]
+
+\Ifreldown\
+
+[Thorne: Bye.]
+[Thorne: Se ya t'morrow]
+
+\\Call nobody\\
+
+(I should go to sleep...)
+(Its too late to call anyone.)
+
+\\going to sleep\\
+
+(That was a really fun day.)
+(I really enjoyed that.)
+

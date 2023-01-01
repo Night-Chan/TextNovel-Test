@@ -13,6 +13,12 @@ far = 0
 club = 0
 savedat = []
 checklist = [0]
+event = 0
+tohrudate = 0
+thornedate = 0
+tohrudead = 0
+thornedead = 0
+
 
 class data:
 	def save():
@@ -40,6 +46,48 @@ class error:
 		print("")
 		print("Hey! Thats not a valid input! Try again.")
 		print("")
+
+
+
+class recheck:
+	def checkdate():
+		global tohru
+		global thorne
+		global event
+		global tohrudate
+		global thornedate
+		
+		if tohru == 8 or tohru == 9:
+			if event != 1 and tohrudate != 1:
+				with open('characterevents/datetohru.txt') as text:
+					txtp.lines(0,3)
+					event = 1
+					tohrudate = 1
+		if thorne == 8 or thorne == 9:
+			if event != 1 and thornedate != 1:
+				with open('characterevents/datethorne.txt') as text:
+					txtp.lines(0,3)
+					event = 1
+					thornedate = 1
+	def checkkill():
+		global tohru
+		global thorne
+		global event
+		global tohrudead
+		global thornedead
+		if tohru == 0 or tohru == 1:
+			if event != 1 and tohrudead != 1:
+				with open('characterevents/xxtohru.txt') as text:
+					txtp.lines(0,3)
+					event = 1
+					tohrudead = 1
+		if thorne == 0 or thorne == 1:
+			if event != 1 and thornedead != 1:
+				with open('characterevents/xxthorne.txt') as text:
+					txtp.lines(0,3)
+					event = 1
+					thornedead = 1
+
 
 class txtp:
 	def lines(numone, numtwo):
@@ -128,19 +176,47 @@ class relate:
 	def tohruplus():
 		global relationshiptemp
 		global tohru
-		tohru = tohru + relationshiptemp
+		global tohrudate
+		if tohrudate == 0 and tohru != 9:
+			tohru = tohru + relationshiptemp
+		if tohru > 9:
+			tohru = 9
 	def tohruminus():
 		global relationshiptemp
 		global tohru
-		tohru = tohru - relationshiptemp
+		global tohrudate
+		if tohrudate == 0 and tohru != 0:
+			tohru = tohru - relationshiptemp
+		if tohru < 0:
+			tohru = 0
 	def thorneplus():
 		global relationshiptemp
 		global thorne
-		thorne = thorne + relationshiptemp
+		global thornedate
+		if thornedate == 0 and thorne != 9:
+			thorne = thorne + relationshiptemp
+		if thorne > 9:
+			thorne = 9
 	def thorneminus():
 		global relationshiptemp
 		global thorne
-		thorne = thorne - relationshiptemp
+		global thornedate
+		if thornedate == 0 and thorne != 0:
+			thorne = thorne - relationshiptemp
+		if thorne < 0:
+			thorne = 0
+
+
+class speak:
+	def daytwo(lineone,linetwo):
+		with open('daytwo.txt') as text:
+			txtp.lines(lineone,linetwo)
+			txtp.close()
+	def twoquestion(val,ask,d1,d2,d21,d22,d31,d32,yn1,yn2,yn3,pl,mn,dat):
+		with open('daytwo.txt') as text:
+			txtp.question(val,ask,d1,d2,d21,d22,d31,d32,yn1,yn2,yn3,pl,mn,dat)
+			txtp.close()
+
 
 
 
@@ -360,6 +436,7 @@ if checkpoint == 4:
 	
 	time.sleep(longdial)
 	checkpoint = 5
+	savenow = 1
 	while savenow != "done":
 		savenow = input("Do you want to save? (y/n)")
 		if savenow == "y" or savenow == "Y":
@@ -372,7 +449,28 @@ if checkpoint == 4:
 		elif savenow != "n" and savenow != "N" and savenow != "y" and savenow != "Y" and savenow != "done":
 			print("Hey! That's an invalid input!")
 			print("")
-		
+
+#DAY TWO STARTS HERE
+
+if checkpoint == 5:	
+	checkpoint = 11
+
+if checkpoint == 11:
+	speak.daytwo(2,6)
+	speak.twoquestion(2,"1: Run up to her / 2: Keep walking",9,13,18,20,0,0,1,0,0,1,0,0)
+	if temp == 1:
+		relate.tohruplus()
+
+	time.sleep(longdial)
+	checkpoint = 12
+
+if checkpoint == 12:
+	speak.daytwo(22,31)
+
+
+
+
+	
 
 	
 			

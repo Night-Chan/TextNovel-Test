@@ -77,11 +77,13 @@ Thorne: Hey there.
 Tohru: Are you looking at the clubs?
 
 \\\if tohru is five\\\
+
 Tohru: You should join the theatre club.
 Tohru: I signed up for it just the other day,
 Tohru: I'm sure it'll be fun.
 
 \\\if thorne is five\\\
+
 Thorne: The Modern Arts club is really fun.
 Thorne: Im vice president, I'd love if you were to join
 Thorne: Or don't. It's up to you.
@@ -105,7 +107,7 @@ Thorne: It might be fun if we want it to be
 \\\if rel down\\\
 
 (I'll do what seems right)
-(I wonder if I'll know anyone in the clubs)
+(I hope I'll have fun)
 
 
 

@@ -32,6 +32,7 @@ Abby: Do you have the jawa version of Craftmine?
 
 \\\Yes I do\\\
 
+<<<<<<< HEAD
 Abby: You do? Really?
 Abby: Finally a real gamer!
 *Abby talked about games for the rest of the break*
@@ -59,3 +60,6 @@ Tohru: Well you didnt have to be that rude...
 Abby: Yay! Let's play together when you get it.
 Abby: I have so much cool stuff to show you!
 
+=======
+*Abby talked about games for the rest of the break*
+>>>>>>> f02bc82dc9c9e11afd1a6cc2edb632b1b1daa4ec

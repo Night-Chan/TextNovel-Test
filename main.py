@@ -17,12 +17,17 @@ checklist = [0]
 event = 0
 tohrudate = 0
 thornedate = 0
+<<<<<<< HEAD
 abbydate = 0
 tohrudead = 0
 thornedead = 0
 abbydead = 0
 quickdial = 0
 
+=======
+tohrudead = 0
+thornedead = 0
+>>>>>>> f02bc82dc9c9e11afd1a6cc2edb632b1b1daa4ec
 
 
 class data:
@@ -294,6 +299,7 @@ class relate:
 			thorne = thorne - relationshiptemp
 		if thorne < 0:
 			thorne = 0
+<<<<<<< HEAD
 	def abbyplus():
 		global relationshiptemp
 		global abby
@@ -313,17 +319,28 @@ class relate:
 
 
 	
+=======
+>>>>>>> f02bc82dc9c9e11afd1a6cc2edb632b1b1daa4ec
 
 
 class speak:
 	def daytwo(lineone,linetwo):
 		with open('daytwo.txt') as text:
+<<<<<<< HEAD
 			txtp.daytwolines(lineone,linetwo)
 			text.close()
 	def twoquestion(val,ask,d1,d2,d21,d22,d31,d32,yn1,yn2,yn3,pl,mn,dat):
 		with open('daytwo.txt') as text:
 			txtp.daytwoquestion(val,ask,d1,d2,d21,d22,d31,d32,yn1,yn2,yn3,pl,mn,dat)
 			text.close()
+=======
+			txtp.lines(lineone,linetwo)
+			txtp.close()
+	def twoquestion(val,ask,d1,d2,d21,d22,d31,d32,yn1,yn2,yn3,pl,mn,dat):
+		with open('daytwo.txt') as text:
+			txtp.question(val,ask,d1,d2,d21,d22,d31,d32,yn1,yn2,yn3,pl,mn,dat)
+			txtp.close()
+>>>>>>> f02bc82dc9c9e11afd1a6cc2edb632b1b1daa4ec
 
 
 
@@ -559,14 +576,21 @@ if checkpoint == 4:
 			print("")
 
 #DAY TWO STARTS HERE
+<<<<<<< HEAD
 datalen = 5
+=======
+>>>>>>> f02bc82dc9c9e11afd1a6cc2edb632b1b1daa4ec
 
 if checkpoint == 5:	
 	checkpoint = 11
 
 if checkpoint == 11:
 	speak.daytwo(2,6)
+<<<<<<< HEAD
 	speak.twoquestion(2,"1: Run up to her / 2: Keep walking\n",9,13,18,20,0,0,1,0,0,1,0,0)
+=======
+	speak.twoquestion(2,"1: Run up to her / 2: Keep walking",9,13,18,20,0,0,1,0,0,1,0,0)
+>>>>>>> f02bc82dc9c9e11afd1a6cc2edb632b1b1daa4ec
 	if temp == 1:
 		relate.tohruplus()
 
@@ -575,6 +599,7 @@ if checkpoint == 11:
 
 if checkpoint == 12:
 	speak.daytwo(22,31)
+<<<<<<< HEAD
 	speak.twoquestion(2,"1: Yes, I do / 2: No, I dont\n",34,39,42,46,0,0,1,2,0,2,2,1)
 	if temp == 1:
 		relate.abbyplus()
@@ -591,6 +616,8 @@ if quickdial == 2:
 time.sleep(longdial)
 
 
+=======
+>>>>>>> f02bc82dc9c9e11afd1a6cc2edb632b1b1daa4ec
 
 
 
